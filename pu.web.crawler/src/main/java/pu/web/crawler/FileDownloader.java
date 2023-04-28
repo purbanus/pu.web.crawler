@@ -47,8 +47,11 @@ public static void download( URL aUrl, String aOutPath, String aReferer ) throws
 	      OutputStream out = new FileOutputStream( aOutPath );
 	)
 	{
-		FileHelper.copyFile( in, out );
+		//FileHelper.copyFile( in, out );
+		//in.transferTo( out );
+		FileHelper.copyStream( in, out );
 	}
+
 }
 
 }
