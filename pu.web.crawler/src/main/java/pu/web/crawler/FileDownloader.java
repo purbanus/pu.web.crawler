@@ -36,6 +36,10 @@ public static void download( URL aUrl, String aOutPath ) throws IOException
 {
 	download( aUrl, aOutPath, null );
 }
+/*
+ * How to set the charset in request using apache httpclient fluent 4.3.2 - https://stackoverflow.com/questions/21984219/how-to-set-the-charset-in-request-using-apache-httpclient-fluent-4-3-2
+ */
+
 public static void download( URL aUrl, String aOutPath, String aReferer ) throws IOException
 {
 	URLConnection urlConnection = aUrl.openConnection();
