@@ -28,8 +28,9 @@ public class TestUrl
 		URL url = new URL( URL_STRING );
 		URLConnection connection = url.openConnection();
 		System.out.println( connection.getHeaderFields() );
-		FileOutputStream out = new FileOutputStream( FILE_STRING );
-		try ( InputStream in =  url.openStream(); )
+		
+		try ( InputStream in =  url.openStream();
+			FileOutputStream out = new FileOutputStream( FILE_STRING );)
 		{
 			FileHelper.copyStream( in, out );
 		}
